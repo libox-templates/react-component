@@ -1,8 +1,8 @@
-import typescript from 'rollup-plugin-typescript2';
+import typescript from "rollup-plugin-typescript2";
 
 const config = {
-  input: './src/main.ts',
-  external: ['react'],
+  input: "./src/main.ts",
+  external: ["react"],
   plugins: [typescript()],
 };
 
@@ -10,31 +10,31 @@ export default [
   // ESModule
   Object.assign({}, config, {
     output: {
-      file: 'dist/index.esm.js',
-      format: 'es',
+      file: "dist/index.esm.js",
+      format: "es",
     },
   }),
 
   // CommonJS
   Object.assign({}, config, {
     output: {
-      file: 'dist/index.common.js',
-      format: 'cjs',
+      file: "dist/index.common.js",
+      format: "cjs",
       strict: false,
-      exports: 'named',
+      exports: "named",
     },
   }),
 
   // UMD
   Object.assign({}, config, {
     output: {
-      file: 'dist/index.js',
-      format: 'umd',
+      file: "dist/index.js",
+      format: "umd",
       strict: false,
-      exports: 'named',
-      name: 'YourComponentName',
+      exports: "named",
+      name: "YourComponentName",
       globals: {
-        react: 'React',
+        react: "React",
       },
     },
   }),
