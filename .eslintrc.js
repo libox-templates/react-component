@@ -1,15 +1,15 @@
 module.exports = {
-  parser:  '@typescript-eslint/parser',
+  parser:  "@typescript-eslint/parser",
   parserOptions: {
     "ecmaVersion": 2019,
-    "sourceType": 'module',
+    "sourceType": "module",
     "ecmaFeatures":{
       jsx:true,
     },
   },
   extends: [
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended'
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
   settings: {
     "react": {
@@ -17,7 +17,7 @@ module.exports = {
       "version": "detect",
     },
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ["@typescript-eslint"],
   env:{
     browser: true,
   },
