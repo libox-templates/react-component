@@ -6,6 +6,7 @@ node_modules
 .docz
 .libox
 dist
+coverage
 
 # local env files
 .env.local

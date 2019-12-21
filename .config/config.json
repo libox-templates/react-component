@@ -13,6 +13,6 @@
     "docs/index.mdx",
     "docs/usage/component.mdx",
 
-    ["__test__/components/YourComponent.spec.tsx", "__test__/components//<%= componentName %>.spec.tsx"]
+    ["__test__/components/YourComponent.spec.tsx", "__test__/components/<%= componentName %>.spec.tsx"]
   ]
 }

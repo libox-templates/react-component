@@ -16,8 +16,8 @@
     "build:package": "rollup -c",
     "build:doc": "docz build",
     "ghpages": "npm run build:doc && gh-pages -d .docz/dist",
-    "lint": "eslint '{src,docs,examples}/**/*.{ts,tsx}'",
-    "lint:fix": "eslint --fix '{src,docs,examples}/**/*.{ts,tsx}'",
+    "lint": "eslint '{src,docs,examples,__test__}/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix '{src,docs,examples,__test__}/**/*.{ts,tsx}'",
     "test": "jest"
   },
   "keywords": [

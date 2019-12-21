@@ -1,17 +1,25 @@
 import React, { FC, useState } from "react";
 
+import { classnames } from "../utils";
+
 export interface <%= componentName %>Props {
   visible?: boolean;
-  children: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 
-  onClick: (evt: React.MouseEvent) => void;
+  onClick?: (evt: React.MouseEvent) => void;
 }
 
-const <%= componentName %>: FC<<%= componentName %>Props> = ({ children, visible, onClick }) => {
+const <%= componentName %>: FC<<%= componentName %>Props> = ({
+  children,
+  visible,
+  className,
+  onClick,
+}) => {
   const [innerVisible, setInnerVisible] = useState(visible);
 
   return (
-    <div onClick={onClick} className="<%= name %>">
+    <div onClick={onClick} className={classnames(["<%= name %>", className])}>
       {innerVisible}
       {children}
     </div>
