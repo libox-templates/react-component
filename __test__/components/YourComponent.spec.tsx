@@ -10,16 +10,16 @@ describe("<%= componentName %> Render", () => {
   const wrapper = shallow(<<%= componentName %> />);
 
   it("<%= componentName %> has correct displayName", () => {
-    expect(wrapper.find("<%= componentName %>")).toBeTruthy();
+    expect(<%= componentName %>.displayName).toBe("<%= componentName %>");
   });
 
   it("<%= componentName %> has correct className", () => {
-    expect(wrapper.find("div.<%= name %>")).toBeTruthy();
+    expect(wrapper.is("div.<%= name %>")).toBeTruthy();
 
     const wrapperWithClassName = shallow(
       <<%= componentName %> className="custom-class" />
     );
 
-    expect(wrapper.find("div.<%= name %>.custom-class")).toBeTruthy();
+    expect(wrapperWithClassName.is("div.<%= name %>.custom-class")).toBeTruthy();
   });
 });

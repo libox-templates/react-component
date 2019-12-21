@@ -26,4 +26,6 @@ const <%= componentName %>: FC<<%= componentName %>Props> = ({
   );
 };
 
+<%= componentName %>.displayName = "<%= componentName %>";
+
 export default <%= componentName %>;
