@@ -1,5 +1,16 @@
+.rpt2_cache
 .DS_Store
 node_modules
+
+# output
+.docz
+.libox
+dist
+coverage
+
+# local env files
+.env.local
+.env.*.local
 
 # Log files
 npm-debug.log*
