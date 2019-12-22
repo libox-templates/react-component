@@ -16,9 +16,7 @@ describe("<%= componentName %> Render", () => {
   it("<%= componentName %> has correct className", () => {
     expect(wrapper.is("div.<%= name %>")).toBeTruthy();
 
-    const wrapperWithClassName = shallow(
-      <<%= componentName %> className="custom-class" />
-    );
+    const wrapperWithClassName = shallow(<<%= componentName %> className="custom-class" />);
 
     expect(wrapperWithClassName.is("div.<%= name %>.custom-class")).toBeTruthy();
   });
