@@ -5,6 +5,7 @@
     "README.md",
     "README_EN.md",
     "doczrc.js",
+    "rollup.config.js",
 
     "src/main.ts",
     "src/themes/default/index.less",

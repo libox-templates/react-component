@@ -6,11 +6,15 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": false,
-    "noEmit": true,
     "jsx": "react",
     "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "experimentalDecorators": true
-  }
+  },
+  "include": [
+    "./src"
+  ]
 }

@@ -4,6 +4,7 @@
   "description": "<%= description %>",
   "main": "dist/index.common.js",
   "module": "dist/index.esm.js",
+  "types": "dist/main.d.ts",
   "files": [
     "dist",
     "examples",
@@ -13,7 +14,9 @@
   "scripts": {
     "dev": "docz dev",
     "start:doc": "docz build && docz serve",
+    "build": "npm run build:package && npm run build:style",
     "build:package": "rollup -c",
+    "build:style": "lessc -x src/themes/index.less dist/index.css",
     "build:doc": "docz build",
     "ghpages": "npm run build:doc && gh-pages -d .docz/dist",
     "lint": "eslint '{src,docs,examples,__test__}/**/*.{ts,tsx}'",
@@ -29,7 +32,6 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "@rollup/plugin-typescript": "^2.0.1",
     "@types/enzyme": "^3.10.4",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.23",
@@ -53,6 +55,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rollup": "^1.27.8",
+    "rollup-plugin-typescript2": "^0.26.0",
     "ts-jest": "^24.2.0"
   },
   "peerDependencies": {

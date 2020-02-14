@@ -1,4 +1,5 @@
-import typescript from "@rollup/plugin-typescript";
+// TODO: migrate to @rollup/plugin-typescript once https://github.com/rollup/plugins/issues/61 resolved
+import typescript from "rollup-plugin-typescript2";
 
 const config = {
   input: "./src/main.ts",
@@ -32,7 +33,7 @@ export default [
       format: "umd",
       strict: false,
       exports: "named",
-      name: "YourComponentName",
+      name: "<%= componentName %>",
       globals: {
         react: "React",
       },
