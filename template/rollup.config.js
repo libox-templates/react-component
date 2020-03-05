@@ -1,10 +1,16 @@
 // TODO: migrate to @rollup/plugin-typescript once https://github.com/rollup/plugins/issues/61 resolved
 import typescript from "rollup-plugin-typescript2";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 const config = {
   input: "./src/main.ts",
-  external: ["react"],
-  plugins: [typescript()],
+  external: ["react", "react-dom"],
+  plugins: [
+    typescript(),
+    resolve(),
+    commonjs(),
+  ],
 };
 
 export default [
