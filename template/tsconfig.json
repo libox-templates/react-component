@@ -1,20 +1,29 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "es6",
+    "module": "es6",
     "moduleResolution": "node",
-    "strict": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": false,
+    "importHelpers": true,
     "jsx": "react",
-    "declaration": true,
-    "declarationMap": true,
+    "esModuleInterop": true,
     "sourceMap": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "experimentalDecorators": true
+    "baseUrl": "./",
+    "strict": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@@/*": ["src/.umi/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
   },
-  "include": [
-    "./src"
-  ]
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    "typings",
+    "**/__test__",
+    "test"
+  ],
+  "include": ["src"]
 }

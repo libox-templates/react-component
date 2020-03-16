@@ -1,7 +1,11 @@
-import { classnames } from "../src/utils";
+import { classnames, prefix } from "@/utils";
 
 describe("utils", () => {
-  it("classnames function return corrent value perfectly", () => {
+  test("prefix correctly", () => {
+    expect(prefix("a", "prefix-")).toBe("prefix-a");
+  });
+
+  test("get className correctly", () => {
     const data = [
       {
         input: "a",
