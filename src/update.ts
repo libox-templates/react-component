@@ -79,6 +79,7 @@ const writePkg = () => {
 
 const overwrite = () => {
   const files = [
+    ".umirc.ts",
     "docs/index.md",
     "docs/usage/component.md",
     "examples/Basis.tsx",
