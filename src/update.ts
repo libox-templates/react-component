@@ -66,7 +66,7 @@ const writePkg = () => {
     name: pkg.name,
     componentName: config.filters?.pascal(pureName) || pureName,
     description: pkg.description,
-    author: pkg.author,
+    author: config.filters.authorSplit(pkg.author),
   };
 
   config.context = context;
