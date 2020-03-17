@@ -4,8 +4,10 @@ ejsFiles:
   - LICENSE
   - README.md
   - README_EN.md
+
   - src/index.ts
   - src/themes/default/variables.less
+  - src/constants/index.ts
   - - src/components/YourComponent.tsx
     - src/components/<%= componentName %>.tsx
 

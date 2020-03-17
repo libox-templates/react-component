@@ -54,9 +54,23 @@ const copy = () => {
   ];
 
   for (let file of files) {
-    fs.copySync(path.resolve(__dirname, "../template", file), resolveProject(file));
+    fs.copySync(resolveTemplate(file), resolveProject(file));
   }
 };
+
+const move = () => {
+  const files = [
+    ["src/main.ts", "src/index.ts"],
+  ];
+
+  for (let file of files) {
+    const filePath = resolveProject(file[0]);
+
+    if (fs.existsSync(filePath)) {
+      fs.moveSync(filePath, resolveProject(file[1]))
+    }
+  }
+}
 
 const writePkg = () => {
   const pkg = fs.readJsonSync(resolveProject("package.json"));
@@ -105,6 +119,7 @@ const update = (projectRoot: string, { filters }: { filters: Filters }) => {
   config.filters = filters;
 
   remove();
+  move();
   copy();
   writePkg();
   overwrite();
