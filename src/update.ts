@@ -46,7 +46,7 @@ const copy = () => {
     ".gitignore",
     ".prettierignore",
     ".prettierrc",
-    "app.ts",
+    "src/app.ts",
     "jest.config.js",
     "logo.ts",
     "tsconfig.json",
