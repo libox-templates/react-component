@@ -3,7 +3,7 @@ import { defineConfig } from "dumi";
 import LOGO from "./logo";
 
 export default defineConfig({
-  title: "<%= name %>",
+  title: "<%= componentName %>",
   description: "<%= description %>",
   logo: LOGO,
   base: "/<%= name %>",

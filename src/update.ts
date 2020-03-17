@@ -61,6 +61,7 @@ const copy = () => {
 const move = () => {
   const files = [
     ["src/main.ts", "src/index.ts"],
+    ["src/types.ts", "src/types.d.ts"],
   ];
 
   for (let file of files) {
@@ -95,6 +96,7 @@ const overwrite = () => {
   const files = [
     ".umirc.ts",
     "docs/index.md",
+    "docs/develop.md",
     "docs/usage/component.md",
     "examples/Basis.tsx",
     ["__tests__/components/YourComponent.test.tsx", "__tests__/components/<%= componentName %>.test.tsx"],
