@@ -1,31 +1,35 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 
-import { classnames } from "../utils";
+import { prefix, classnames } from "../utils";
+import { CLASS_NAME_PREFIX } from "../constants";
 
-export interface <%= componentName %>Props {
-  visible?: boolean;
+interface <%= componentName %>Props {
+  classNamePrefix?: string;
   className?: string;
-  children?: React.ReactNode;
+  style?: React.CSSProperties;
 
-  onClick?: (evt: React.MouseEvent) => void;
+  onClick?: (evt: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
 const <%= componentName %>: FC<<%= componentName %>Props> = ({
-  children,
-  visible,
+  classNamePrefix = CLASS_NAME_PREFIX,
   className,
+  style,
   onClick,
+  children,
 }) => {
-  const [innerVisible, setInnerVisible] = useState(visible);
-
   return (
-    <div onClick={onClick} className={classnames(["<%= name %>", className])}>
-      {innerVisible}
+    <div
+      style={style}
+      className={classnames({
+        [prefix("", classNamePrefix)]: true,
+        [className]: Boolean(className),
+      })}
+      onClick={onClick}
+    >
       {children}
     </div>
   );
 };
-
-<%= componentName %>.displayName = "<%= componentName %>";
 
 export default <%= componentName %>;

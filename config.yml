@@ -1,0 +1,38 @@
+ejsFiles:
+  - package.json
+  - .umirc.ts
+  - LICENSE
+  - README.md
+  - README_EN.md
+
+  - src/index.ts
+  - src/themes/default/variables.less
+  - src/constants/index.ts
+  - - src/components/YourComponent.tsx
+    - src/components/<%= componentName %>.tsx
+
+  - docs/index.md
+  - docs/usage/component.md
+  - examples/Basis.tsx
+
+  - - __tests__/components/YourComponent.test.tsx
+    - __tests__/components/<%= componentName %>.test.tsx
+  - __tests__/utils/index.test.ts
+prompts:
+  - name: name
+    type: input
+    message: 项目名
+    default: "{{basename}}"
+  - name: componentName
+    type: input
+    message: 组件名称
+    default: "{{name | pascal}}"
+  - name: description
+    type: input
+    message: 描述
+    default: "适用于 React 的 {{componentName}} 组件。"
+  - name: author
+    type: input
+    message: 作者
+    format: authorSplit
+    default: "{{defaultUser | authorJoin}}"

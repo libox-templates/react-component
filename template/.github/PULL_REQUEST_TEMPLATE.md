@@ -18,5 +18,4 @@
 
 - [ ] 代码风格与本项目一致，并通过 `npm run lint` 校验
 - [ ] 如果需要修改文档，请修改（包含中英文文档）
-- [ ] 提交信息符合 [gitmoji](https://github.com/carloscuesta/gitmoji) 的规范
-- [ ] 遵循 [Semantic Versioning 2.0.0](https://semver.org) 修改版本号
+- [ ] 使用 `npm run commit` 进行提交

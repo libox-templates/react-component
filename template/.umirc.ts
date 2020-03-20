@@ -1,0 +1,14 @@
+// more config: https://d.umijs.org/config
+import { defineConfig } from "dumi";
+import LOGO from "./logo";
+
+export default defineConfig({
+  title: "<%= componentName %>",
+  description: "<%= description %>",
+  logo: LOGO,
+  base: "/<%= name %>",
+  publicPath: "/<%= name %>/",
+  outputPath: "site",
+  hash: true,
+  exportStatic: {},
+});

@@ -82,16 +82,11 @@ const Demo = () => (
 
 ## 发布日志
 
-详见 [Releases][url-releases]
-
-<!-- ## Collaborators -->
+[Releases][url-releases]
 
 ## 开发和构建
 
-[开发和构建](xxxxxx)
-
-## 关于我们
-
+[开发和构建][url-develop]
 
 [badge-npm-version]: https://img.shields.io/npm/v/<%= name %>
 [badge-node-version]: https://img.shields.io/node/v/<%= name %>
@@ -102,6 +97,7 @@ const Demo = () => (
 
 [url-npm]: https://npmjs.org/package/<%= name %>
 [url-dependencies]: https://david-dm.org/vkbansal/<%= name %>
-[url-releases]: https://github.com/xxxx/<%= name %>/releases
+[url-releases]: https://github.com/<%= author.name %>/<%= name %>/releases
+[url-develop]: https://<%= author.name %>.github.io/<%= name %>
 
 [image-npm]: https://nodei.co/npm/<%= name %>.png
