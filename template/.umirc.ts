@@ -9,5 +9,6 @@ export default defineConfig({
   base: "/<%= name %>",
   publicPath: "/<%= name %>/",
   outputPath: "site",
+  hash: true,
   exportStatic: {},
 });
